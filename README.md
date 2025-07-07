@@ -1,5 +1,5 @@
 # Cesartwothousands's Personal Homepage
 
-Personal Homepage of **Zihan** (Cesartwothousands).
+Personal Homepage of **Zihan Chen** (Cesartwothousands): <https://cesartwothousands.github.io/>
 
-Template from <a href="https://jiayuanm.com/">[1<a>, <a href="https://xavihart.github.io/">2]
+Template from [[1]](https://jiayuanm.com/), [[2]](https://xavihart.github.io/)
