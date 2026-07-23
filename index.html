@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Zihan Chen - Ph.D. Student in Rutgers University</title>
+    <title>Zihan Chen - Ph.D. Student at Rutgers University</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Zihan Chen is a PhD student in Computer Science and Quantum Computing at Rutgers University. He is interested in quantum computer architecture and compiler design for quantum computing. His advisor is Prof. Eddy Z. Zhang. He has published several papers in quantum computing and computer architecture such as Genesis and PhasePoly in ISCA'2025 and QCE'2025.">
-    <meta name="keywords" content="Zihan Chen,Ph.D. Student,Rutgers University,Computer System,Quantum Computing,Computer Architecture,Compiler,ISCA,MICRO,QCE">
+    <meta name="description" content="Zihan Chen is a PhD student in Computer Science and Quantum Computing at Rutgers University. He is interested in quantum computer architecture and compiler design for quantum computing. His advisor is Prof. Eddy Z. Zhang. He has published several papers in quantum computing and computer architecture conferences such as ISCA'25, ISCA'26 and QCE'25.">
+    <meta name="keywords" content="Zihan Chen,Ph.D. Student,Rutgers University,Computer System,Quantum Computing,Computer Architecture,Compiler,ISCA,ASPLOS,MICRO,QCE">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="static/image/logos/quantum.png">
@@ -20,30 +20,15 @@
 body{margin:0;padding:0;}
 a{color:rgba(1, 70, 0, 0.676)}
 a:hover{color:#0d5797}
-#background{position:fixed;top:0;overflow:hidden;height:0}
-#wave-canvas{display:block;position:relative;top:0;left:5%;width:55%;min-width:850px;height:150px;border:0}
-/*#main{z-index:2;margin:0 auto;position:absolute;padding-top:5%;width:100%;min-width:240px;text-align:center;background-color:rgb(254,250,246)}*/
 #main{margin:0 auto;padding:45px 30px 15px;width:100%;min-width:240px;text-align:center;background-color:white}
 
 .main-content{padding:0;text-align:center;cursor:default;text-align:center;}
-/*#main-content{background:rgba(238,238,238,0.95);padding:0;text-align:center;cursor:default;text-align:center;}*/
-/*.main-content{margin-left:6.5104167%;width:86.9791667%;}*/
 @media (min-width: 768px) {
     .main-content{width:66%;min-width:668px;margin:auto;}
 }
 @media (min-width: 1200px) {
     .main-content{width:66%;max-width:900px;margin:auto;}
 }
-/*.main-content {
-    width:86.9791667%;
-    margin: 0 auto;
-}
-@media (min-width: 768px) {
-    .main-content{width:66%;min-width:668px;}
-}
-@media (min-width: 1200px) {
-    .main-content{width:66%;max-width:900px;}
-}*/
 /* Avatar, Name, etc. */
 #main-content-container{margin:0 auto;padding:15px 0 0;max-width:1080px;}
 @media (min-width: 768px) {
@@ -56,7 +41,7 @@ a:hover{color:#0d5797}
 }
 #main-content-container .col-avatar{
     flex: 0 0 auto;           /* ✅ 固定宽度，不收缩 */
-    margin-right: 30px;       /* 可选的右侧空隙 */
+    margin: 0 30px 0 0;       /* 可选的右侧空隙 */
 }
 
 @media (min-width: 768px) {
@@ -81,14 +66,6 @@ a:hover{color:#0d5797}
 #main-info-container .col-name .text{text-align:left}
 #main-info-container .col-name .name{margin:0;color:#CC0033;font-size:2em;font-family:'Georgia', Times, serif}
 #main-info-container .col-name .email{color:#666; font-size:16px}
-#main-info-container .col-link{text-align:center;margin:-5px 0 -25px;}
-#main-info-container .col-link ul {margin:0px auto auto;padding:0;list-style:none;text-align:center}
-#main-info-container .col-link li {display:inline-block;margin:auto;padding:0 10px;color:#ccc;line-height:10px}
-#main-info-container .col-link li a{width:45px;height:45px;color:#ccc;padding:0;font-size:45px;line-height:45px}
-#main-info-container .col-link li a:focus,
-#main-info-container .col-link li a:hover{text-decoration:none;cursor:hand}
-#main-info-container .col-link li a.border{border:1px solid #ccc;border-radius:100%;}
-#main-info-container .col-link li a.padding{padding:0px 0px;font-size:22px}
 
 /* Other */
 .main-more-container{width:100%;}
@@ -102,10 +79,9 @@ a:hover{color:#0d5797}
 
 #main-pub-container{margin:auto;padding: 0 0em;max-width:1080px;text-align:left;padding-top:30px;max-width:1080px}
 #main-pub-container .subtitle{color:#2b3c4b;}
-#main-pub-container .subtitle a {font-size:18px; color: #96a5b3; font-weight:400}
-#main-pub-container .subtitle a.activated {color:#333333; font-weight:600}
-#main-pub-container .subtitle a.activated:focus,
-#main-pub-container .subtitle a.activated:hover {text-decoration:none;cursor:initial}
+#main-pub-container .publication-control{padding:0;border:0;background:none;color:#96a5b3;font-size:24px;font-weight:400;cursor:pointer}
+#main-pub-container .publication-control.activated{color:#333333;font-weight:600;cursor:default}
+#main-pub-container .publication-control:focus-visible{outline:2px solid #0d5797;outline-offset:2px}
 
 #main-pub-container .subtitle-aux {font-size:1rem}
 #main-pub-container .subtitle-aux a.activated {color:#333333}
@@ -122,7 +98,7 @@ a:hover{color:#0d5797}
 #main-pub-card-container .pub-card-body{width:100%;background:transparent;padding-left:0px}
 #main-pub-card-container .pub-card .title{font-weight:600;font-size:1rem;margin-bottom:4px;line-height:1.4}
 #main-pub-card-container .pub-card .authors{font-weight:400;color:#666666;margin-bottom:4px;line-height:1.4}
-#main-pub-card-container .pub-card .authors a{color:#666666}
+#main-pub-card-container .pub-card .authors span{color:#666666}
 #main-pub-card-container .pub-card .authors u{color:#333333;font-weight:600;text-decoration:none}
 #main-pub-card-container .pub-card .conference{color:cornflowerblue;font-weight:600}
 #main-pub-card-container .pub-card .note{display:block;color:#999999;text-decoration:none;font-size:14px}
@@ -182,19 +158,16 @@ a:hover{color:#0d5797}
 
 <body>
 
-<!--img src="static/img/hal-gatewood.jpg" id="background" class="" /-->
 
 <div id="main">
-    <!--canvas id="wave-canvas"></canvas-->
-
     <div class="main-content">
         <div id="main-content-container" class="container">
             <div class="row">
-                <div class="col-avatar">
-                    <img src="static/image/personal/Profile picture(square).jpg" class="avatar"/>
-                    <figcaption style="font-size: small;">Game night with my family</figcaption>
+                <figure class="col-avatar">
+                    <img src="static/image/personal/Profile picture(square).jpg" class="avatar" alt="Portrait of Zihan Chen">
+                    <figcaption style="font-size: small;">Let's go scarlet knights!</figcaption>
                     <figcaption style="font-size: small;">📍Piscataway, New Jersey</figcaption>
-                </div>
+                </figure>
                 <div class="col-sm-12 col-md-9">
                     <div id="main-info-container">
                             <div class="col-name">
@@ -203,27 +176,27 @@ a:hover{color:#0d5797}
                                     <span style="font-size: medium;">/ziːˈhɑːn/ ; /tʃɛn/</span>
                                   </h1> 
                                   
-                                  <h1 class="email">Email: zihan.chen.cs [at] rutgers [dot] edu</h1>
+                                  <p class="email">Email: zihan.chen.cs [at] rutgers [dot] edu</p>
                                   
                                   <p class="text">Office: CoRE 632, 96 Frelinghuysen Road, Piscataway, NJ 08854</p>
                                   
                                   <p class="text">
-                                    I am a Ph.D. student in Computer Science at 
+                                    I am a third-year Ph.D. student in Computer Science at
                                     <img src="static/image/logos/RUTGERS_V_RED_BLACK_RGB.png" alt="Rutgers Logo" style="vertical-align: middle; width: 20px; height: auto;">
                                     <b><a href="https://www.rutgers.edu/">Rutgers University</a></b>, advised by <b><a href="https://people.cs.rutgers.edu/~zz124/">Prof. Eddy Z. Zhang</a></b>. 
-                                    I have obtained my M.Sc. in Computer Science from <i>Rutgers University</i>, and my B.E. in Telecommunication Engineering from <img src="static/image/logos/nuist.jpg" alt="nuist Logo" style="vertical-align: middle; width: 20px; height: auto;"> <i>Nanjing University of Information Science & Technology</i> (<b>Changwang School of Honors</b>), through a joint program with <img src="static/image/logos/ucas.png" alt="ucas Logo" style="vertical-align: middle; width: 20px; height: auto;"> <i>University of Chinese Academy of Sciences</i>.
+                                    I have obtained my M.Sc. in Computer Science from <i>Rutgers University</i>, and my B.E. in Telecommunication Engineering from <img src="static/image/logos/nuist.jpg" alt="NUIST logo" style="vertical-align: middle; width: 20px; height: auto;"> <i>Nanjing University of Information Science &amp; Technology</i> (<b>Changwang School of Honors</b>), through a joint program with <img src="static/image/logos/ucas.png" alt="UCAS logo" style="vertical-align: middle; width: 20px; height: auto;"> <i>University of Chinese Academy of Sciences</i>.
                                   </p>
                                   
                             </div>
 
                             <div class="col-name">
-                            <i style="font-size:22px" class="fa">&#xf1a0;</i>
-                            <a href="https://scholar.google.com/citations?user=PogkoyUAAAAJ&hl=en">[Google Scholar]</a>
-                            <i style="font-size:24px" class="fa">&#xf08c;</i>
+                            <i style="font-size:22px" class="fa" aria-hidden="true">&#xf1a0;</i>
+                            <a href="https://scholar.google.com/citations?user=PogkoyUAAAAJ&amp;hl=en">[Google Scholar]</a>
+                            <i style="font-size:24px" class="fa" aria-hidden="true">&#xf08c;</i>
                             <a href="https://www.linkedin.com/in/zihanchenyc/">[LinkedIn]</a>
-                            <i style="font-size:24px" class="fa">&#xf09b;</i>
+                            <i style="font-size:24px" class="fa" aria-hidden="true">&#xf09b;</i>
                             <a href="https://github.com/Cesartwothousands">[Github]</a>
-                            <i style="font-size:24px" class="fa">&#xf1c1;</i>
+                            <i style="font-size:24px" class="fa" aria-hidden="true">&#xf1c1;</i>
                             <a href="static/image/cv/CV251104-A.pdf">[Curriculum Vitae (11/04/2025)]</a>
                     </div>
                 </div>
@@ -240,28 +213,29 @@ a:hover{color:#0d5797}
                 My research interests broadly span <b>Computer Systems</b> topics such as Computer Architecture, Compilers and High-Performance Computing. 
                 <br>
                 <br>
-                Currently, I focus on <b><img src="static/image/logos/quantum.png" alt="Quantum Computing Logo" style="vertical-align: middle; width: 20px; height: auto;"> Quantum Computing</b>—specifically quantum computer architecture and applications. I am particularly interested in leveraging techniques from classical architecture, compiler design, and machine learning to improve the programmability, fault tolerance, and scalability of current quantum computers.
+                <img src="static/image/logos/quantum.png" alt="Quantum Computing Logo" style="vertical-align: middle; width: 20px; height: auto;"> Currently, I focus on building efficient and optimized compiler systems for <b> end-to-end fault-tolerant quantum computing (FTQC) systems and applications</b>.
                 <br>
                 <br>
-                I am interested in potential research collaboration or internship opportunities. If you have any questions about my work or potential cooperation, please feel free to reach out.
+                <img src="static/image/logos/agent.png" alt="AI Agent Logo" style="vertical-align: middle; width: 20px; height: auto;">
+                 I am also interested in developing an agentic AI workflow based on the standards of automation, verifiability, and scalability to facilitate <b>automated research and scientific discovery</b>.
             </p>
                 
             <h3 class="subtitle">News 📢</h3>
             <ul class="news-list">
                 <li>
-                    <span style="color:#BB2222">[2026.05] </span> I have started my internship as a W.J. Cody Associate at <a href="https://www.anl.gov/"><b>Argonne National Laboratory</b></a>, working on highly efficient and optimized compilation for end-to-end fault-tolerant quantum computing (FTQC) pipelines.
+                    <span style="color:#BB2222">[2026.05] </span> I have started my internship as a W.J. Cody Associate at <a href="https://www.anl.gov/"><b>Argonne National Laboratory</b></a>, working with Dr. Ji Liu.
                 </li>
                 <li>
-                    <span style="color:#BB2222">[2026.04] </span> I gave a talk about <a href="#talk-asplos26" id="jump-to-talk-asplos26"><u>Strategies and tools to compile CV-DV quantum circuits</u></a> at the CMSC858Y Quantum Computing Systems Seminar, University of Maryland.
+                    <span style="color:#BB2222">[2026.04] </span> I gave a talk about <a href="#talk-asplos26"><u>Strategies and tools to compile CV-DV quantum circuits</u></a> at the CMSC858Y Quantum Computing Systems Seminar, University of Maryland.
                 </li>
                 <li>
-                    <span style="color:#BB2222">[2026.03] </span> One first-author paper(<u>Leveraging Phase Polynomials for Quantum Circuit Optimization</u>) has been accepted to ISCA'2026! See you in Raleigh.
+                    <span style="color:#BB2222">[2026.03] </span> One first-author paper(<a href="https://arxiv.org/abs/2506.20624"><u>Leveraging Phase Polynomials for Quantum Circuit Optimization</u></a>) has been accepted to ISCA'26! See you in Raleigh.
                 </li>
                 <li>
-                    <span style="color:#BB2222">[2026.03] </span> I gave a talk about <a href="#talk-asplos26" id="jump-to-talk-asplos26"><u>Strategies and tools to compile CV-DV quantum circuits</u></a> at ASPLOS'2026 Hybrid Oscillator-Qubit Quantum Processors Tutorial. Our tutorial was featured on the <a href="https://www.sigarch.org/beyond-qubits-a-systems-view-of-hybrid-cv-dv-quantum-computing/"><u>SIGARCH Computer Architecture Today</u></a>.
+                    <span style="color:#BB2222">[2026.03] </span> I gave a talk about <a href="#talk-asplos26"><u>Strategies and tools to compile CV-DV quantum circuits</u></a> at ASPLOS'26 Hybrid Oscillator-Qubit Quantum Processors Tutorial. Our tutorial was featured on the <a href="https://www.sigarch.org/beyond-qubits-a-systems-view-of-hybrid-cv-dv-quantum-computing/"><u>SIGARCH Computer Architecture Today</u></a>.
                 </li>
                 <li>
-                    <span style="color:#BB2222">[2026.03] </span> One poster paper(<u>Rethinking Circuit Optimization in FTQC</u>) has been accepted to HAIQ workshop at ASPLOS'2026! Check our poster <a href="static/image/ftqc_circuit_optimizer/HAIQ'26_poster_16.pdf"><u>here</u></a>. See you in Pittsburgh.
+                    <span style="color:#BB2222">[2026.03] </span> One poster paper(<u>Rethinking Circuit Optimization in FTQC</u>) has been accepted to HAIQ workshop at ASPLOS'26! Check our poster <a href="static/image/ftqc_circuit_optimizer/HAIQ'26_poster_16.pdf"><u>here</u></a>. See you in Pittsburgh.
                 </li>
                 <li>
                     <span style="color:#BB2222">[2026.01] </span> One paper <a href="https://link.springer.com/article/10.1007/s42484-026-00357-w"><u>Layerwise Retraining and Freezing for Multi-Angle QAOA</u></a> has been accepted to Quantum Machine Intelligence, congrats to Enhyeok!
@@ -270,14 +244,14 @@ a:hover{color:#0d5797}
                     <span style="color:#0d5797">[2025.08] </span> I was awarded the <a href="https://sites.google.com/view/qcore25"><u>Q-CORE@QCE'25</u></a> Travel Grant, thanks to StableQ and DCHCQCS!
                 </li>
                 <li>
-                    <span style="color:#0d5797">[2025.07] </span> One poster paper(<u>PhasePoly</u>) has been accepted to QCE'2025! Check our poster (QSYS::1319) <a href="static/image/phasepoly/QCE'25 poster.pdf"><u>here</u></a>. See you in Albuquerque.
+                    <span style="color:#0d5797">[2025.07] </span> One poster paper(<u>PhasePoly</u>) has been accepted to QCE'25! Check our poster <a href="static/image/phasepoly/QCE'25 poster.pdf"><u>here</u></a>. See you in Albuquerque.
                 </li>
                 <!--<li>
                     <span style="color:#0d5797">[2025.07] </span> We proposed <a href="https://arxiv.org/abs/2506.20624"><u>PhasePoly</u></a>, a compilation optimization framework for quantum circuits.
-                </li>-->
                 <li>
                     <span style="color:#0d5797">[2025.06] </span> I will organize and host <a href="#rutgers-qec" id="jump-to-rutgers-qec"><u>Rutgers QEC: Theory and Systems Reading Group</u></a>.
                 </li>
+                </li>-->
                 <li>
                     <span style="color:#0d5797">[2025.05] </span> I gave a talk about <a href="#talk-ncsu" id="jump-to-talk-ncsu"><u>Compiler framework on hybrid CV-DV quantum computers for Hamiltonian simulation</u></a> at North Carolina State University CV-DV Group Meeting.
                 </li>
@@ -285,7 +259,7 @@ a:hover{color:#0d5797}
                     <span style="color:#0d5797">[2025.05] </span> We released <a href="https://github.com/ruadapt/Genesis-CVDV-Compiler"><u>Genesis v1.0.0</u></a>, a compiler framework for Hamiltonian simulation targeting hybrid continuous-variable (CV) and discrete-variable (DV) quantum systems.
                 </li>-->
                 <li>
-                    <span style="color:#0d5797">[2025.03] </span> One first-author paper(<a href="https://arxiv.org/abs/2505.13683"><u>Genesis</u></a>) has been accepted to ISCA'2025! See you in Tokyo.
+                    <span style="color:#0d5797">[2025.03] </span> One first-author paper(<a href="https://arxiv.org/abs/2505.13683"><u>Genesis</u></a>) has been accepted to ISCA'25! See you in Tokyo.
                 </li>
                 <li>
                     <span style="color:#2ECC71">[2024.06] </span> I started my Research Assistant role at Rutgers University on Quantum Computing, advised by Professor <a href="https://people.cs.rutgers.edu/~zz124/"><u>Eddy Z. Zhang</u></a>.
@@ -302,14 +276,14 @@ a:hover{color:#0d5797}
             <h3 class="subtitle">
             Publications 📚
             (
-                <a style="font-size:24px" id="publication-by-selected" href="javascript:;", onClick="publicationBySelected();">show selected</a> /
-                <a style="font-size:24px" id="publication-by-date" href="javascript:;", onClick="publicationByDate();">show all by date</a> /
-                <a style="font-size:24px" id="publication-by-topic" href="javascript:;", onClick="publicationByTopic();">show all by topic</a>
+                <button type="button" class="publication-control" id="publication-by-selected" onclick="publicationBySelected();" aria-pressed="false">show selected</button> /
+                <button type="button" class="publication-control" id="publication-by-date" onclick="publicationByDate();" aria-pressed="false">show all by date</button> /
+                <button type="button" class="publication-control" id="publication-by-topic" onclick="publicationByTopic();" aria-pressed="false">show all by topic</button>
             )
             </h3>
             <p class="subtitle-aux"><span class="bold">Topics:</span>
-                <a href="#topic-Hamiltonian-Simulation" onClick="return publicationByTopicSpecific(this)" data-topic="Hamiltonian-Simulation">QC Programmability</a> /
                 <a href="#topic-Circuit-Optimization" onClick="return publicationByTopicSpecific(this)" data-topic="Circuit-Optimization">Circuit Optimization</a> /
+                <a href="#topic-Hamiltonian-Simulation" onClick="return publicationByTopicSpecific(this)" data-topic="Hamiltonian-Simulation">QC Programmability</a> /
 
                 <!--
                 <a href="#topic-vision" onClick="return publicationByTopicSpecific(this)" data-topic="vision">Vision</a> /
@@ -324,58 +298,59 @@ a:hover{color:#0d5797}
               
 
             <div id="main-pub-card-container" class="activated hide">
-                <div class="pub-card" data-topic="Hamiltonian-Simulation" data-year="2025" data-selected="true">
+                <div class="pub-card" data-topic="Circuit-Optimization" data-year="2026" data-selected="true">
                     <div class="row">
                         <div class="col-l col-xs-12 col-lg-3">
-                            <img src="static/image/genesis/genesis2.jpeg" width="100%" />
+                            <img src="static/image/phasepoly/phasepoly_highlevel.png" width="100%" alt="Overview of the PhasePoly quantum circuit optimization framework">
                         </div>
                         <div class="col-r col-xs-12 col-lg-9">
                             <div class="pub-card-body">
-                                <h5 class="title">Genesis: A Compiler Framework for Hamiltonian Simulation on Hybrid CV-DV Quantum Computers</h5>
+                                <h5 class="title">Leveraging Phase Polynomials for Quantum Circuit Optimization</h5>
                                 <h6 class="authors">
-                                    <u style="color: #BB2222;">Zihan Chen*</u>,
-                                    <a>Jiakang Li*</a>,
-                                    <a>Minghao Guo*</a>,
-                                    <a>Henry Chen</a>,
-                                    <a>Zirui Li</a>,
-                                    <a>Joel Bierman</a>,
-                                    <a>Yipeng Huang</a>,
-                                    <a>Huiyang Zhou</a>,
-                                    <a>Yuan Liu</a>,
-                                    <a>Eddy Z. Zhang</a>
+                                    <u style="color: #BB2222;">Zihan Chen</u>,
+                                    <span>Henry Chen</span>,
+                                    <span>Yuwei Jin</span>,
+                                    <span>Enhyeok Jang</span>,
+                                    <span>Mingkuan Xu</span>,
+                                    <span>Vannessa Chan</span>,
+                                    <span>Won Woo Ro</span>,
+                                    <span>Eddy Z. Zhang</span>
                                 </h6>
                                 <p class="info">
-                                    <a href="https://dl.acm.org/doi/full/10.1145/3695053.3731065" class="conference" style="color:green;"> [ISCA'2025] </a>
-                                    <a href="https://github.com/ruadapt/Genesis-CVDV-Compiler" class="conference" style="color:rgb(242, 0, 255);"> [Software] </a>
-                                    <a href="static/image/genesis/Genesis_ISCA2025_presentation_slide.pdf" class="conference"> [Slides] </a>
+                                    <a href="https://arxiv.org/abs/2506.20624" class="conference" style="color:green;"> [ISCA'26] </a>
+                                    <a href="https://github.com/ruadapt/PhasePoly" class="conference" style="color:rgb(242, 0, 255);"> [Software] </a>
+                                    <a href="static/image/phasepoly/PhasePoly_ISCA2026_presentation_slide.pdf" class="conference" style="color:#ff8c00;"> [Slides] </a>
+                                    <a href="static/image/phasepoly/QCE'25 poster.pdf" class="conference"> [QCE'25 Poster] </a>
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div> 
 
-                <div class="pub-card" data-topic="Circuit-Optimization" data-year="2025" data-selected="true">
+                <div class="pub-card" data-topic="Hamiltonian-Simulation" data-year="2025" data-selected="true">
                     <div class="row">
                         <div class="col-l col-xs-12 col-lg-3">
-                            <img src="static/image/phasepoly/phasepoly_highlevel.png" width="100%" />
+                            <img src="static/image/genesis/genesis2.jpeg" width="100%" alt="Overview of the Genesis compiler framework for hybrid CV-DV quantum computers">
                         </div>
                         <div class="col-r col-xs-12 col-lg-9">
                             <div class="pub-card-body">
-                                <h5 class="title">PhasePoly: An Optimization Framework for Phase Polynomials in Quantum Circuits</h5>
+                                <h5 class="title">Genesis: A Compiler Framework for Hamiltonian Simulation on Hybrid CV-DV Quantum Computers</h5>
                                 <h6 class="authors">
-                                    <u style="color: #BB2222;">Zihan Chen</u>,
-                                    <a>Henry Chen</a>,
-                                    <a>Yuwei Jin</a>,
-                                    <a>Minghao Guo</a>,
-                                    <a>Enhyeok Jang</a>,
-                                    <a>Jiakang Li</a>,
-                                    <a>Caitlin Chan</a>,
-                                    <a>Won Woo Ro</a>,
-                                    <a>Eddy Z. Zhang</a>
+                                    <u style="color: #BB2222;">Zihan Chen*</u>,
+                                    <span>Jiakang Li*</span>,
+                                    <span>Minghao Guo*</span>,
+                                    <span>Henry Chen</span>,
+                                    <span>Zirui Li</span>,
+                                    <span>Joel Bierman</span>,
+                                    <span>Yipeng Huang</span>,
+                                    <span>Huiyang Zhou</span>,
+                                    <span>Yuan Liu</span>,
+                                    <span>Eddy Z. Zhang</span>
                                 </h6>
                                 <p class="info">
-                                    <a href="static/image/phasepoly/QCE'25 poster.pdf" class="conference"> [QCE'25 Poster] </a>
-                                    <a href="https://arxiv.org/abs/2506.20624" class="conference" style="color:green;"> [Arxiv] </a>
+                                    <a href="https://dl.acm.org/doi/full/10.1145/3695053.3731065" class="conference" style="color:green;"> [ISCA'25] </a>
+                                    <a href="https://github.com/ruadapt/Genesis-CVDV-Compiler" class="conference" style="color:rgb(242, 0, 255);"> [Software] </a>
+                                    <a href="static/image/genesis/Genesis_ISCA2025_presentation_slide.pdf" class="conference"  style="color:#ff8c00;font-weight: bold;"> [Slides] </a>
                                 </p>
                             </div>
                         </div>
@@ -390,6 +365,12 @@ a:hover{color:#0d5797}
             <h3 class="subtitle" style="margin-top:0px">Talks and Presentations 🎤</h3>
 
             <ul>
+                <li>
+                    <h5 style="color:#0d5797" id="talk-isca26">[Talk] Leveraging Phase Polynomials for Quantum Circuit Optimization</h5>
+                    <p>
+                        <b>The 53rd International Symposium on Computer Architecture (ISCA 2026)</b>, Raleigh, NC. Jul 1, 2026. <b><a href="static/image/phasepoly/PhasePoly_ISCA2026_presentation_slide.pdf"> [Slides] </a></b>
+                    </p>
+                </li>
                 <li>
                     <h5 style="color:#0d5797" id="talk-asplos26">
                         [Talk] Strategies and tools to compile CV-DV quantum circuits.
@@ -423,7 +404,7 @@ a:hover{color:#0d5797}
                 Organizer of <b>Rutgers QEC: Theory and Systems Reading Group</b>
             </h5>
             <p>
-                Weekly reading group on tutorial and papers related to Quantum Error Correction (QEC). Topics span from theoretical QEC, quantum compiler design optimized for QEC, to AI-driven approaches for QEC. There will be one presenter each week, followed by group discussion and Q&A. Hosted 37 invited talks by 23 speakers from 12 different academic institutions, spanning backgrounds in computer science, electrical engineering, applied physics, and mathematics (as of Apr 2026). <a href="https://docs.google.com/forms/d/1M5vxh6AXxCAJ2XjO7PVM6vkFSzjtf4FDulSUPA1toL4/edit"><b><u>Join us!</u></b></a>
+                Weekly reading group on tutorial and papers related to Quantum Error Correction (QEC). Topics span from theoretical QEC, quantum compiler design optimized for QEC, to AI-driven approaches for QEC. There will be one presenter each week, followed by group discussion and Q&amp;A. Hosted 37 invited talks by 23 speakers from 12 different academic institutions, spanning backgrounds in computer science, electrical engineering, applied physics, and mathematics (as of Apr 2026). <a href="https://docs.google.com/forms/d/1M5vxh6AXxCAJ2XjO7PVM6vkFSzjtf4FDulSUPA1toL4/edit"><b><u>Join us!</u></b></a>
             </p>
 
             <h5 style="color:#BB2222">
@@ -431,14 +412,17 @@ a:hover{color:#0d5797}
             </h5>
             <ul>
                 <li>ACM Transactions on Quantum Computing</li>
+                <li>IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems</li>
+                <li>Scientific Reports</li>
             </ul>
 
             <h5 style="color:#BB2222">
-            Technical Program Committee:
+            Conference Reviewer:
             </h5>
             <ul>
                 <li>QCE'25, '26</li> <!-- https://qce.quantum.ieee.org/2025/committees/technical-papers-program-committee/ -->
                 <li>US-RSE'26</li> 
+                <li>NetQSA'26</li>
             </ul>
 
             <h5 style="color:#BB2222">Artifact Evaluation Committee:</h5>
@@ -456,7 +440,7 @@ a:hover{color:#0d5797}
                     <p>
                         May 2026 - Aug 2026
                         <br>
-                        Working on highly efficient and optimized compilation for end-to-end fault-tolerant quantum computing (FTQC) pipelines.
+                        Working with Dr. Ji Liu on highly efficient and optimized compilation for end-to-end fault-tolerant quantum computing (FTQC) pipelines.
                     </p>
                 </li>
                 <li>
@@ -500,10 +484,10 @@ a:hover{color:#0d5797}
     <div class="container">
         <div class="row">
             <div class="copyright">
-                &copy; Zihan Chen, template from <a href="https://jiayuanm.com/">[1<a>, <a href="https://xavihart.github.io/">2]<a>
+                &copy; Zihan Chen, template adapted from <a href="https://jiayuanm.com/">[1]</a> and <a href="https://xavihart.github.io/">[2]</a>
             </div>
             <div class="stat">
-                <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=eVHWhkyNlETNBv96AdO5ay07eHhqZtn_-Tn8FNL6Ls0&cl=ffffff&w=a"></script>
+                <script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d=aLvHGwcFeT1a-Q2mzCrHSpfRxDAemgCj-5Iir7KWkq8&amp;cl=ffffff&amp;w=a"></script>
             </div>
         </div>
     </div>
@@ -516,19 +500,19 @@ a:hover{color:#0d5797}
         integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
         integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-<script type="text/javascript" src="static/js/jquery.color.min.js"></script>
-<!--script type="text/javascript" src="static/js/wave.js"></script-->
 <script type="text/javascript">
 
 $.fn.isInViewport = function() {
     var elementTop = $(this).offset().top;
-    var elementBottom = elementTop + $(this).xouterHeight();
+    var elementBottom = elementTop + $(this).outerHeight();
     var viewportTop = $(window).scrollTop();
     var viewportBottom = viewportTop + $(window).height();
     return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
 var allPublications = null;
+var allTopicsLink = null;
+var allTopics = [];
 
 function publicationBySelected() {
     var a = $("#publication-by-selected")
@@ -536,9 +520,9 @@ function publicationBySelected() {
         return ;
     }
 
-    $("#main-pub-container .subtitle a").removeClass("activated");
-    $("#main-pub-container .subtitle-aux a").removeClass("activated");
-    a.addClass("activated");
+    $("#main-pub-container .publication-control").removeClass("activated").attr("aria-pressed", "false");
+    $("#main-pub-container .subtitle-aux a").removeClass("activated").removeAttr("aria-current");
+    a.addClass("activated").attr("aria-pressed", "true");
 
     $("#main-pub-card-container").html("");
     for (var pubId = 0; pubId < allPublications.length; pubId++) {
@@ -555,9 +539,9 @@ function publicationByDate() {
         return ;
     }
 
-    $("#main-pub-container .subtitle a").removeClass("activated");
-    $("#main-pub-container .subtitle-aux a").removeClass("activated");
-    a.addClass("activated");
+    $("#main-pub-container .publication-control").removeClass("activated").attr("aria-pressed", "false");
+    $("#main-pub-container .subtitle-aux a").removeClass("activated").removeAttr("aria-current");
+    a.addClass("activated").attr("aria-pressed", "true");
 
     $("#main-pub-card-container").html("");
     for (var pubId = 0; pubId < allPublications.length; pubId++) {
@@ -574,14 +558,13 @@ function publicationByTopicInner() {
     if (a.hasClass("activated")) {
         return ;
     }
-    $("#main-pub-container .subtitle a").removeClass("activated");
-    a.addClass("activated");
+    $("#main-pub-container .publication-control").removeClass("activated").attr("aria-pressed", "false");
+    a.addClass("activated").attr("aria-pressed", "true");
 
     $("#main-pub-card-container").html("");
     for (var topicId in allTopics) {
         var topic = allTopics[topicId].name;
         var topicTitle = allTopics[topicId].title;
-        // var topicTitle = topic.split("-").map(function (a) { return a[0].toUpperCase() + a.substr(1).toLowerCase(); }).join(" ");
         $("#main-pub-card-container").append($("<h5 id='topic-" + topic + "'>" + topicTitle + "</h5>"));
         for (var pubId = 0; pubId < allPublications.length; pubId++) {
             var pub = $(allPublications[pubId]);
@@ -597,8 +580,8 @@ function publicationByTopicSpecificInner(a) {
         return false;
     }
 
-    $("#main-pub-container .subtitle-aux a").removeClass("activated");
-    $(a).addClass("activated");
+    $("#main-pub-container .subtitle-aux a").removeClass("activated").removeAttr("aria-current");
+    $(a).addClass("activated").attr("aria-current", "true");
 }
 
 function publicationByTopic() {
@@ -627,109 +610,6 @@ function publicationByTopicSpecific(a) {
 }
 
 $(function() {
-    getRealSize = function(bgImg) {
-        var img = new Image();
-        img.src = bgImg.attr("src");
-        var width = img.width,
-            height = img.height;
-        return {
-            width: width,
-            height: height
-        }
-    };
-
-    getRealWindowSize = function() {
-        var winWidth = null,
-            winHeight = null;
-        if (window.innerWidth) winWidth = window.innerWidth;
-        else if ((document.body) && (document.body.clientWidth)) winWidth = document.body.clientWidth;
-        if (window.innerHeight) winHeight = window.innerHeight;
-        else if ((document.body) && (document.body.clientHeight)) winHeight = document.body.clientHeight;
-        if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth) {
-            winHeight = document.documentElement.clientHeight;
-            winWidth = document.documentElement.clientWidth
-        }
-        return {
-            width: winWidth,
-            height: winHeight
-        }
-    };
-
-    fullBg = function() {
-        var bgImg = $("#background");
-        var mainContainer = $("#main");
-        var firstFire = null;
-
-        if (bgImg.length == 0) {
-            return ;
-        }
-
-        function resizeImg() {
-            var realSize = getRealSize(bgImg);
-            var imgWidth = realSize.width;
-            var imgHeight = realSize.height;
-
-            if (imgWidth == 0 || imgHeight == 0) {
-                setTimeout(function() {
-                    resizeImg();
-                }, 200);
-            }
-
-            console.log(realSize);
-            var realWinSize = getRealWindowSize();
-            var winWidth = realWinSize.width;
-            var winHeight = realWinSize.height;
-            var widthRatio = winWidth / imgWidth;
-            var heightRatio = winHeight / imgHeight;
-            console.log(realWinSize);
-            if (widthRatio > heightRatio) {
-                bgImg.width(imgWidth * widthRatio + 'px').height(imgHeight * widthRatio + 'px').css({'top':
-                    -(imgHeight * widthRatio - winHeight) / 10 * 5 + 'px', 'left': '0'})
-            } else {
-                bgImg.width(imgWidth * heightRatio + 'px').height(imgHeight * heightRatio + 'px').css({'left':
-                    -(imgWidth * heightRatio - winWidth) / 10 * 3 + 'px', 'top': '0'})
-            }
-            // mainContainer.css({
-            //     width: winWidth,
-            //     height: winHeight
-            // });
-        }
-
-        resizeImg();
-        window.onresize = function() {
-            if (firstFire === null) {
-                firstFire = setTimeout(function() {
-                    resizeImg();
-                    firstFire = null
-                }, 100)
-            }
-        }
-    };
-
-    targetColor = $("#main-content-container .name").css("color");
-    animatedLink = function(speed) {
-        $("#main-content-container .col-link li").hover(function() {
-            $(this).find('.icon').animate({
-                color: targetColor,
-                borderColor: targetColor
-            }, speed);
-            $(this).find('.caption').animate({
-                color: targetColor
-            })
-        }, function() {
-            $(this).find('.icon').animate({
-                borderColor: '#cccccc',
-                color: '#cccccc'
-            }, speed);
-            $(this).find('.caption').animate({
-                color: '#cccccc'
-            })
-        })
-    };
-
-    // fullBg();
-    animatedLink(400);
-
     allPublications = $("#main-pub-card-container .pub-card");
     allTopicsLink = $("#main-pub-container .subtitle-aux a");
     allTopics = [];
@@ -738,19 +618,9 @@ $(function() {
     }
 
     $("#publication-by-selected").click();
-    // $("#publication-by-date").click();
     $("#main-pub-card-container").removeClass("hide");
 });
 
-document.addEventListener('keydown', function(event) {
-    // 这里以 J 键为例（key 为小写 j）
-    if (event.key === 'j' || event.key === 'J') {
-        var target = document.getElementById('rutgers-qec');
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-        }
-    }
-});
 </script>
 </body>
 </html>
