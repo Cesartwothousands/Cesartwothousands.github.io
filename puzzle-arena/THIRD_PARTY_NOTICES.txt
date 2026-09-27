@@ -1,0 +1,5 @@
+# Third-party software
+
+Puzzle Arena uses Electron and React (MIT), Vite (MIT), Lucide icons (ISC), quickjs-emscripten (MIT), QuickJS (MIT), electron-builder (MIT), and NSIS (zlib/libpng license and component notices). Distribution archives retain Electron's bundled LICENSE and LICENSES.chromium.html. Package versions are recorded in package-lock.json. The current research controller is project-owned Python standard-library code and invokes the separately installed Codex CLI. Historical experiments used OpenEvolve; that engine and external adapters are not runtime dependencies or bundled source.
+
+No LinkedIn logos, proprietary art or daily puzzle corpus are included. The game rules are independently implemented, and packaged puzzles are generated and uniqueness-checked locally.
