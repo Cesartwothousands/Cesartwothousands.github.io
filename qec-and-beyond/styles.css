@@ -1,0 +1,48 @@
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    margin: 0;
+    color: #333;
+    background: #fff;
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+}
+a { color: #386638; text-underline-offset: 3px; }
+a:hover { color: #0d5797; }
+a:focus-visible { outline: 2px solid #0d5797; outline-offset: 4px; }
+.site-shell { max-width: 1080px; margin: 0 auto; padding: 32px 24px 40px; }
+.back-link { display: inline-block; margin-bottom: 36px; font-size: 14px; }
+.page-header { margin-bottom: 36px; }
+.eyebrow { margin: 0 0 8px; color: #666; font-size: 14px; }
+h1, h2, h3 { color: #2b3c4b; line-height: 1.3; font-weight: 600; }
+h1 { margin: 0 0 14px; font-size: clamp(28px, 5vw, 40px); }
+h2 { margin: 0 0 10px; font-size: 26px; }
+h3 { margin: 0 0 12px; font-size: 21px; }
+p { margin: 0 0 16px; }
+.lead { max-width: 760px; color: #555; }
+.site-nav { display: flex; gap: 24px; margin-top: 24px; border-bottom: 1px solid #dce1e5; }
+.site-nav a { padding: 8px 0 12px; text-decoration: none; }
+.site-nav a[aria-current="page"] { border-bottom: 3px solid #386638; color: #2b3c4b; font-weight: 600; }
+section + section { margin-top: 44px; }
+.section-heading { margin-bottom: 20px; }
+.section-heading p { color: #555; }
+.poster-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.poster-card { overflow: hidden; border: 1px solid #dce1e5; border-radius: 8px; }
+.poster-preview { display: flex; justify-content: center; align-items: center; height: 400px; padding: 20px; border-bottom: 1px solid #dce1e5; background: #f5f7f8; }
+.poster-preview img { display: block; max-width: 100%; max-height: 100%; width: auto; height: auto; }
+.poster-body { padding: 22px 24px 24px; }
+.poster-body > p { color: #555; }
+.pdf-link { display: inline-block; font-weight: 600; }
+.speaker { margin-bottom: 2px; font-weight: 600; }
+.affiliation { margin-bottom: 14px; color: #666; font-size: 14px; }
+.page-footer { margin-top: 44px; padding-top: 20px; border-top: 1px solid #e5e8eb; color: #666; font-size: 14px; }
+.page-footer p:last-child { margin-bottom: 0; }
+@media (max-width: 700px) {
+    .site-shell { padding: 24px 18px 32px; }
+    .back-link { margin-bottom: 28px; }
+    .poster-grid { grid-template-columns: 1fr; gap: 20px; }
+    .poster-preview { height: 360px; padding: 16px; }
+    .poster-body { padding: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+}

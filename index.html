@@ -119,6 +119,7 @@ a:hover{color:#0d5797}
 .bold{font-weight:600}
 .highlight{color:#BB2222;font-weight:600}
 .highlight:hover{color:#BB2222;font-weight:600}
+.seminar-link,.seminar-link:hover{color:#BB2222;font-weight:700}
 .hide{display:none}
 
 
@@ -220,13 +221,6 @@ a:hover{color:#0d5797}
                  I am also interested in developing an agentic AI workflow based on the standards of automation, verifiability, and scalability to facilitate <b>automated research and scientific discovery</b>.
             </p>
                 
-            <h3 class="subtitle">Interactive Projects 🧩</h3>
-            <p>
-                <a href="puzzle-arena/"><b>Puzzle Arena — Zip &amp; Queens</b></a><br>
-                Play logic puzzles, replay solver decisions, and compare heuristic methods at a human action pace.
-                Explore methods evolved with Codex, with English and Chinese interfaces.
-            </p>
-
             <h3 class="subtitle">News 📢</h3>
             <ul class="news-list">
                 <li>
@@ -363,6 +357,34 @@ a:hover{color:#0d5797}
                         </div>
                     </div>
                 </div> 
+
+                <div class="pub-card" data-topic="Circuit-Optimization" data-year="2026" data-selected="true">
+                    <div class="row">
+                        <div class="col-l col-xs-12 col-lg-3">
+                            <img src="static/image/orbit_qaoa/orbit_qaoa_overview.png" width="100%" alt="Overview of the Orbit-QAOA cyclic layerwise retraining and parameter freezing strategy">
+                        </div>
+                        <div class="col-r col-xs-12 col-lg-9">
+                            <div class="pub-card-body">
+                                <h5 class="title">Layerwise retraining and freezing for multi-angle QAOA</h5>
+                                <h6 class="authors">
+                                    <span>Enhyeok Jang</span>,
+                                    <u style="color: #BB2222;">Zihan Chen</u>,
+                                    <span>Dongho Ha</span>,
+                                    <span>Seungwoo Choi</span>,
+                                    <span>Yongju Lee</span>,
+                                    <span>Jaewon Kwon</span>,
+                                    <span>Eddy Z. Zhang</span>,
+                                    <span>Yipeng Huang</span>,
+                                    <span>Won Woo Ro</span>
+                                </h6>
+                                <p class="info">
+                                    <a href="https://link.springer.com/article/10.1007/s42484-026-00357-w" class="conference" style="color:green;"> [Quantum Machine Intelligence] </a>
+                                    <a href="https://arxiv.org/pdf/2601.20029" class="conference"> [arXiv] </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
     </div>
 
@@ -408,10 +430,10 @@ a:hover{color:#0d5797}
             <h3 class="subtitle" style="margin-top:30px">Academic Service 🧾</h3>
             
             <h5 style="color:#BB2222" id="rutgers-qec" >
-                Organizer of <b>Rutgers QEC: Theory and Systems Reading Group</b>
+                Organizer of <b>Rutgers QEC &amp; Beyond Seminar</b>
             </h5>
             <p>
-                Weekly reading group on tutorial and papers related to Quantum Error Correction (QEC). Topics span from theoretical QEC, quantum compiler design optimized for QEC, to AI-driven approaches for QEC. There will be one presenter each week, followed by group discussion and Q&amp;A. Hosted 37 invited talks by 23 speakers from 12 different academic institutions, spanning backgrounds in computer science, electrical engineering, applied physics, and mathematics (as of Apr 2026). <a href="https://docs.google.com/forms/d/1M5vxh6AXxCAJ2XjO7PVM6vkFSzjtf4FDulSUPA1toL4/edit"><b><u>Join us!</u></b></a>
+                Weekly online seminar exploring the breadth of quantum computing, from error-correction theory and algorithms to software and applications. One-hour sessions feature a talk followed by Q&amp;A. Browse the <a class="seminar-link" href="qec-and-beyond/">seminar overview</a> for posters and the <a class="seminar-link" href="qec-and-beyond/schedule/">seminar schedule</a> for upcoming sessions. Hosted 37 invited talks by 23 speakers from 12 different academic institutions, spanning backgrounds in computer science, electrical engineering, applied physics, and mathematics (as of Apr 2026).
             </p>
 
             <h5 style="color:#BB2222">
@@ -481,6 +503,13 @@ a:hover{color:#0d5797}
                     </p>
                 </li>
             </ul>
+
+            <h3 class="subtitle" style="margin-top:30px">Interactive Projects 🧩</h3>
+            <p>
+                <a href="puzzle-arena/"><b>Puzzle Arena — Zip &amp; Queens</b></a><br>
+                Play logic puzzles, replay solver decisions, and compare heuristic methods at a human action pace.
+                Explore methods evolved with Codex, with English and Chinese interfaces.
+            </p>
         </div>
     </div>
 
@@ -544,13 +573,16 @@ function publicationByDate() {
     $("#main-pub-container .subtitle-aux a").removeClass("activated").removeAttr("aria-current");
     a.addClass("activated").attr("aria-pressed", "true");
 
+    var publicationsByDate = allPublications.get().sort(function(a, b) {
+        return $(b).data("year") - $(a).data("year");
+    });
     $("#main-pub-card-container").html("");
-    for (var pubId = 0; pubId < allPublications.length; pubId++) {
-        if (pubId == 0 || $(allPublications[pubId-1]).data("year") != $(allPublications[pubId]).data("year")) {
-            var year = $(allPublications[pubId]).data("year");
+    for (var pubId = 0; pubId < publicationsByDate.length; pubId++) {
+        if (pubId == 0 || $(publicationsByDate[pubId-1]).data("year") != $(publicationsByDate[pubId]).data("year")) {
+            var year = $(publicationsByDate[pubId]).data("year");
             $("#main-pub-card-container").append($("<h5 id='year-" + year.toString() + "'>" + year.toString() + "</h5>"));
         }
-        $("#main-pub-card-container").append(allPublications[pubId]);
+        $("#main-pub-card-container").append(publicationsByDate[pubId]);
     }
 }
 
