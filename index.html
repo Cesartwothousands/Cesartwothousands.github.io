@@ -285,6 +285,7 @@ a:hover{color:#0d5797}
             <p class="subtitle-aux"><span class="bold">Topics:</span>
                 <a href="#topic-Circuit-Optimization" onClick="return publicationByTopicSpecific(this)" data-topic="Circuit-Optimization">Circuit Optimization</a> /
                 <a href="#topic-Hamiltonian-Simulation" onClick="return publicationByTopicSpecific(this)" data-topic="Hamiltonian-Simulation">QC Programmability</a> /
+                <a href="#topic-QEC-Compilation" onClick="return publicationByTopicSpecific(this)" data-topic="QEC-Compilation">QEC Compilation</a> /
 
                 <!--
                 <a href="#topic-vision" onClick="return publicationByTopicSpecific(this)" data-topic="vision">Vision</a> /
@@ -380,6 +381,30 @@ a:hover{color:#0d5797}
                                 <p class="info">
                                     <a href="https://link.springer.com/article/10.1007/s42484-026-00357-w" class="conference" style="color:green;"> [Quantum Machine Intelligence] </a>
                                     <a href="https://arxiv.org/pdf/2601.20029" class="conference"> [arXiv] </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-card" data-topic="QEC-Compilation" data-year="2026" data-date="2026-10" data-selected="true">
+                    <div class="row">
+                        <div class="col-l col-xs-12 col-lg-3">
+                            <img src="static/image/routing_space/routing_space_overview.png" width="100%" alt="Dynamic routing space: lanes shift from above to below the logical qubits between execution stages">
+                        </div>
+                        <div class="col-r col-xs-12 col-lg-9">
+                            <div class="pub-card-body">
+                                <h5 class="title">Demand-Driven Routing Space for Lattice-Surgery Compilation</h5>
+                                <h6 class="authors">
+                                    <span>Hanyu Wang</span>,
+                                    <span>Wan-Hsuan Lin</span>,
+                                    <u style="color: #BB2222;">Zihan Chen</u>,
+                                    <span>Eddy Z. Zhang</span>,
+                                    <span>Jason Cong</span>
+                                </h6>
+                                <p class="info">
+                                    <a href="https://arxiv.org/pdf/2610.30747" class="conference"> [arXiv] </a>
+                                    <a href="https://github.com/Nozidoali/MiniFlash" class="conference" style="color:rgb(242, 0, 255);"> [Software] </a>
                                 </p>
                             </div>
                         </div>
@@ -574,7 +599,12 @@ function publicationByDate() {
     a.addClass("activated").attr("aria-pressed", "true");
 
     var publicationsByDate = allPublications.get().sort(function(a, b) {
-        return $(b).data("year") - $(a).data("year");
+        var byYear = $(b).data("year") - $(a).data("year");
+        if (byYear != 0) {
+            return byYear;
+        }
+        // Optional data-date="YYYY-MM" ranks a card ahead of undated ones in the same year.
+        return String($(b).data("date") || "").localeCompare(String($(a).data("date") || ""));
     });
     $("#main-pub-card-container").html("");
     for (var pubId = 0; pubId < publicationsByDate.length; pubId++) {
