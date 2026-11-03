@@ -45,7 +45,7 @@
                     <div class="poster-body">
                         <p class="eyebrow">Fall 2026 · Season 4</p>
                         <h3>Semester schedule</h3>
-                        <p>Talks and speakers for October through December 2026. Updated October 27, 2026.</p>
+                        <p>Talks and speakers for October through December 2026. Updated November 3, 2026.</p>
                         <a class="pdf-link" href="schedule/" target="_blank" rel="noopener">Open schedule poster (PDF) &nearr;</a>
                     </div>
                 </article>
@@ -89,6 +89,27 @@
                             <p>We introduce Qomet, a microarchitecture-aware compiler that tightly couples algorithmic properties with lattice surgery (LS) execution. By exploiting C-Phase gate commutativity, Qomet translates sequential operations into simultaneous multi-target interactions, natively leveraging LS to eliminate false dependencies and expose instruction-level parallelism. To support this, Qomet employs an adaptive, event-driven scheduler that captures precise spatial and routing constraints to overlap instructions temporally. By minimizing grid idling and routing contention, Qomet achieves a geometric-mean execution speedup of 4.29× and a maximum speedup of 59.7× across realistic workloads.</p>
                             <h4>About the speaker</h4>
                             <p>Dhanvi is a 3rd-year PhD candidate at the University of Michigan researching quantum computing architecture with Prof. Gokul Ravi. He specializes in hardware-software co-design for QEC and is currently focusing on compilation for fault-tolerant quantum computers. Dhanvi has also worked on teams across the quantum stack at Infleqtion, NVIDIA, qBraid, and Oak Ridge National Lab.</p>
+                        </details>
+                    </div>
+                </article>
+                <article class="poster-card" id="talk-40">
+                    <a class="poster-preview" href="poster/040_Zhou.pdf" target="_blank" rel="noopener" aria-label="Open the poster for talk 40 by Junyu Zhou in a new tab">
+                        <img src="previews/040-zhou.png" width="825" height="1100" alt="Talk 40 poster: GeneCS: Synthesizing Resource-Efficient Code Surgery for Arbitrary Quantum Stabilizer Codes, by Junyu Zhou" loading="lazy">
+                    </a>
+                    <div class="poster-body">
+                        <p class="eyebrow">Talk #40 · Season 4, Talk 3</p>
+                        <h3>GeneCS: Synthesizing Resource-Efficient Code Surgery for Arbitrary Quantum Stabilizer Codes</h3>
+                        <p class="speaker">Junyu Zhou</p>
+                        <p class="affiliation">University of Pennsylvania</p>
+                        <p><time datetime="2026-11-09">November 9, 2026</time> · 1:00–2:00 PM EST / 12:00–1:00 PM CST</p>
+                        <a class="pdf-link" href="poster/040_Zhou.pdf" target="_blank" rel="noopener">Open talk poster (PDF) &nearr;</a>
+                        <details class="talk-details">
+                            <summary>Abstract and speaker biography</summary>
+                            <h4>Abstract</h4>
+                            <p>Fault-tolerant quantum computers may need to combine different quantum error-correcting codes to achieve both efficient storage and computation. But how can we perform logical operations across arbitrary stabilizer codes without requiring a large number of additional qubits? Code surgery provides a general framework for joint logical measurements, yet existing constructions often incur substantial resource overhead.</p>
+                            <p>This talk presents GeneCS, a compiler that treats code surgery as a graph synthesis and optimization problem. GeneCS reuses connectivity already present in the code, balances graph expansion against congestion, and incorporates degree constraints to construct compact ancilla systems while preserving code distance. Across single-code and cross-code benchmarks, it reduces the number of ancillary qubits and checks by roughly 85% compared with prior general constructions, while maintaining comparable logical error rates in simulation. I will also discuss how GeneCS can fit into a broader compilation workflow for heterogeneous quantum error correction.</p>
+                            <h4>About the speaker</h4>
+                            <p>Junyu Zhou is a PhD student in the Department of Computer and Information Science at the University of Pennsylvania, where he works with Gushu Li in the Penn Quantum System Lab. He received his B.S. in Mathematics and Applied Mathematics from Wuhan University in 2024. His research focuses on software for fault-tolerant quantum computing, including quantum error-correction decoding, logical operations, and compilation. His work includes FusionQ, a real-time decoder with optimality guarantees; GeneCS, a compiler for fault-tolerant logical operations; and TopoLS, a surface-code compiler integrated into the TQEC ecosystem.</p>
                         </details>
                     </div>
                 </article>
