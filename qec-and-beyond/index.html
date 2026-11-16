@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Rutgers QEC &amp; Beyond — Overview</title>
-    <meta name="description" content="Rutgers QEC &amp; Beyond Seminar: series posters, semester schedules, and individual talk posters on theory, systems, and applications in quantum computing.">
+    <meta name="description" content="Rutgers QEC &amp; Beyond Seminar. Next session: Rafael Haenel on Tsim, Friday, November 20, 2026, 1–2 PM EST. Browse talk posters, abstracts, and speaker biographies.">
     <link rel="canonical" href="https://cesartwothousands.github.io/qec-and-beyond/">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -15,6 +15,7 @@
             <p class="eyebrow">Rutgers University · Fall 2026 / Season 4</p>
             <h1>Rutgers QEC &amp; Beyond Seminar</h1>
             <p class="lead">A weekly online seminar exploring the breadth of quantum computing, from error-correction theory and algorithms to software and applications.</p>
+            <p class="next-session"><strong>Next seminar · Talk #41</strong><br><a href="#talk-41">Rafael Haenel · Tsim: Fast Universal Simulator for Quantum Error Correction</a><br>Friday, November 20, 2026 · 1:00–2:00 PM EST / 12:00–1:00 PM CST</p>
             <nav class="site-nav" aria-label="Seminar pages">
                 <a href="./" aria-current="page">Overview</a>
                 <a href="schedule/">Schedule</a>
@@ -40,12 +41,12 @@
                 </article>
                 <article class="poster-card">
                     <a class="poster-preview" href="schedule/" target="_blank" rel="noopener" aria-label="Open the Fall 2026 schedule poster PDF in a new tab">
-                        <img src="previews/fall-2026-schedule.png" width="1600" height="1000" alt="Fall 2026 schedule poster listing seminar dates, topics, and speakers">
+                        <img src="previews/fall-2026-schedule.png?v=20261115" width="1600" height="1000" alt="Fall 2026 schedule updated November 15, highlighting Rafael Haenel's confirmed November 20, 2026 Tsim session">
                     </a>
                     <div class="poster-body">
                         <p class="eyebrow">Fall 2026 · Season 4</p>
                         <h3>Semester schedule</h3>
-                        <p>Talks and speakers for October through December 2026. Updated November 5, 2026.</p>
+                        <p>Updated November 15, 2026. <a href="#talk-41">Rafael Haenel's Talk #41</a> is confirmed for November 20, 1:00–2:00 PM EST / 12:00–1:00 PM CST. Later tentative weeks have no confirmed time.</p>
                         <a class="pdf-link" href="schedule/" target="_blank" rel="noopener">Open schedule poster (PDF) &nearr;</a>
                     </div>
                 </article>
@@ -55,9 +56,43 @@
         <section aria-labelledby="talk-posters">
             <div class="section-heading">
                 <h2 id="talk-posters">Talk posters</h2>
-                <p>Individual seminar posters, with abstracts and speaker biographies. See the <a href="schedule/">schedule</a> for dates and upcoming talks.</p>
+                <p>Individual seminar posters, with abstracts and speaker biographies. The latest confirmed session is <a href="#talk-41">Talk #41 with Rafael Haenel</a>. The <a href="schedule/">updated schedule PDF</a> includes the confirmed November 20 session.</p>
             </div>
             <div class="poster-grid">
+                <article class="poster-card" id="talk-41">
+                    <a class="poster-preview" href="poster/041_R_Haenel.pdf" target="_blank" rel="noopener" aria-label="Open the poster for talk 41 by Rafael Haenel in a new tab">
+                        <img src="previews/041-haenel.png" width="2160" height="2880" alt="Talk 41 poster: Tsim: Fast Universal Simulator for Quantum Error Correction, by Rafael Haenel; November 20, 2026, 1–2 PM EST" loading="lazy">
+                    </a>
+                    <div class="poster-body">
+                        <p class="eyebrow">Next seminar · Talk #41 · Season 4, Talk 4</p>
+                        <h3>Tsim: Fast Universal Simulator for Quantum Error Correction</h3>
+                        <div class="speaker-profile">
+                            <img src="assets/041-haenel-portrait.png" width="72" height="72" alt="Rafael Haenel" loading="lazy">
+                            <div>
+                                <p class="speaker"><a href="https://www.linkedin.com/in/rafael-haenel/" target="_blank" rel="noopener">Rafael Haenel</a></p>
+                                <p class="affiliation">QuEra Computing</p>
+                            </div>
+                        </div>
+                        <p><time datetime="2026-11-20T13:00:00-05:00">Friday, November 20, 2026</time><br>1:00–2:00 PM EST / 12:00–1:00 PM CST<br><span class="local-time-note">Beijing: Saturday, November 21 · 2:00–3:00 AM (UTC+08:00)</span></p>
+                        <div class="talk-actions">
+                            <a class="pdf-link" href="poster/041_R_Haenel.pdf" target="_blank" rel="noopener">Open talk poster (PDF) &nearr;</a>
+                            <a href="https://us06web.zoom.us/j/3105318007?pwd=J2lAabtXhMgk6lW6zgbEu6DhalWJ5f.1&amp;omn=85307174680" target="_blank" rel="noopener">Join on Zoom &nearr;</a>
+                        </div>
+                        <details class="talk-details">
+                            <summary>Abstract and speaker biography</summary>
+                            <h4>Abstract</h4>
+                            <p>I will present Tsim, an open-source high-throughput simulator for universal noisy quantum circuits targeting quantum error correction. Tsim represents quantum circuits as ZX diagrams, where Pauli channels are modeled as parameterized vertices. Diagrams are simplified via parameterized ZX rules and then compiled for vectorized sampling on CPU or GPU. While Tsim’s initial compilation strategy is based on stabilizer rank decomposition, we have recently added a Pauli-based state vector computation backend, following the advances by Clifft and SymFT. I will give a light intro to the ZX calculus, explain the underlying simulation algorithms, and demonstrate how in some cases, magic state preparation protocols can be simulated cheaper than Clifford circuits in Stim.</p>
+                            <figure class="research-figure">
+                                <a href="assets/041-tsim-research.svg" target="_blank" rel="noopener" aria-label="Open Rafael Haenel's supplied Tsim research figure in a new tab">
+                                    <img src="assets/041-tsim-research.svg" width="1200" height="431" alt="Speaker-supplied Tsim cultivation benchmark comparing simulation throughput and cost for a distance-five cultivation circuit on 463 qubits" loading="lazy">
+                                </a>
+                                <figcaption>Tsim · Speaker-supplied research figure. <a href="https://github.com/QuEraComputing/tsim" target="_blank" rel="noopener">Explore Tsim on GitHub &nearr;</a></figcaption>
+                            </figure>
+                            <h4>About the speaker</h4>
+                            <p>Rafael Haenel is a Senior Scientific Software Developer at QuEra Computing, where he works at the intersection of quantum error correction, compiler infrastructure, and neutral-atom quantum computing architectures. His work focuses on scalable software systems for fault-tolerant quantum computing on neutral-atom hardware. Prior to joining QuEra, he worked at Photonic Inc. and completed his PhD at the University of British Columbia in condensed matter theory.</p>
+                        </details>
+                    </div>
+                </article>
                 <article class="poster-card" id="talk-38">
                     <a class="poster-preview" href="poster/038_Albarghouthi.pdf" target="_blank" rel="noopener" aria-label="Open the poster for talk 38 by Aws Albarghouthi in a new tab">
                         <img src="previews/038-albarghouthi.png" width="825" height="1100" alt="Talk 38 poster: How to build a wicked fast quantum circuit optimizer, by Aws Albarghouthi" loading="lazy">
